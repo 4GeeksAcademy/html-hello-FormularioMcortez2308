@@ -1,0 +1,184 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 1rem;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.title-div {
+    width: 100%;
+    max-width: 900px;
+    /* mismo ancho que el formulario */
+    margin: 0 auto;
+    /* centra dentro de main-container */
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 900px;
+    /* mismo ancho que el título */
+    margin: 0 auto;
+    /* centra dentro de main-container */
+    box-sizing: border-box;
+}
+
+.class-form-carddata {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.cardinfo {
+    flex: 1 1 0;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+/* Data client: firstName y lastName en fila, etiquetas arriba del input */
+.data-client {
+    display: flex;
+    gap: 30px;
+    /* separación entre first y last */
+    flex-wrap: nowrap;
+    /* forzar fila */
+    width: 100%;
+    max-width: 900px;
+    /* ampliar para adaptarse al contenedor principal */
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.data-client .mb-3 {
+    display: flex;
+    flex-direction: column;
+    /* etiqueta encima del input */
+    gap: 0.5rem;
+    flex: 1 1 50%;
+    /* ancho igual para ambos campos */
+    min-width: 220px;
+    /* permitir mayor ancho y evitar overflow */
+}
+
+/* Asegurar que los inputs ocupen el ancho disponible y no desborden */
+.data-client input,
+.data-location input,
+.cardinfo input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Forzar etiquetas encima y alineadas a la izquierda */
+.data-client .mb-3 label,
+.cardinfo label {
+    display: block;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+}
+
+/* Data location: city y pluscity en fila */
+.data-location {
+    display: flex;
+    flex-direction: row;
+    /* forzar fila */
+    gap: 30px;
+    flex-wrap: nowrap;
+    /* forzar que no se apilen */
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.data-location>.city {
+    display: flex;
+    flex-direction: column;
+    /* etiqueta encima del input */
+    gap: 0.5rem;
+    flex: 0 0 50%;
+    /* ancho fijo relativo */
+    min-width: 240px;
+    /* asegurar espacio mínimo */
+}
+
+.data-location>.pluscity {
+    display: flex;
+    flex-direction: row;
+    /* forzar fila para pluscity */
+    gap: 0.5rem;
+    flex: 0 0 50%;
+    /* más espacio para state+zip */
+    min-width: 220px;
+}
+
+/* Dentro de pluscity: state y zip lado a lado */
+.pluscity {
+    display: flex;
+    flex-direction: row;
+    /* aseguramos fila */
+    judstify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* evitar que se apilen */
+}
+
+.pluscity .data-state {
+    display: flex;
+    flex-direction: column;
+    /* etiqueta encima del input */
+    gap: 0.5rem;
+    /*flex: 3 1 50%; /* más ancho para state */
+    min-width: 120px;
+    /* asegurar espacio mínimo */
+}
+
+.pluscity .data-zip {
+    display: flex;
+    flex-direction: column;
+    /* etiqueta encima del input */
+    gap: 0.5rem;
+    /*flex: 1 1 30%;*/
+    min-width: 90px;
+}
+
+
+
+/* Forzar etiquetas encima y alineadas a la izquierda para data-location */
+.data-location label,
+.pluscity label {
+    display: block;
+    text-align: left;
+    align-self: flex-start;
+    width: 100%;
+}
+
+
+.input-group .input-group-text {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+    border-right: 0;
+    background-color: transparent;
+}
+
+.state {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+}
